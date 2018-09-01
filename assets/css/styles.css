@@ -179,7 +179,7 @@ body {
   }
 
 .header .intro {
-    background: #00a5bb;
+    background-image: url('assets/images/backgroundimage.jpeg');
     padding-top: 90px;
     padding-bottom: 60px;
     position: relative;
