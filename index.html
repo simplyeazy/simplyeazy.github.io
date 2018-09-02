@@ -755,11 +755,13 @@
             document.getElementById("preamble1").innerHTML = DATAKU.Preamble;
             var toAdd = document.createDocumentFragment();
             for (let i = 0; i < DATAKU.Education.length; i++) {
+                let from = new Date(DATAKU.Education[i].Time.From);
+                let to = new Date(DATAKU.Education[i].Time.To)
                 var newDiv = document.createElement("div");
                 var newDiv2 = document.createElement("div");
                 newDiv.className = "item col-12 col-md-4";
                 newDiv2.className = "item-inner";
-                newDiv2.innerHTML = `<h3 class="degree">${DATAKU.Education[i]["Academic Degree"]}</h3><div class="education-body">${DATAKU.Education[i]["School"]}</div> <div class="time">${DATAKU.Education[i].Time.From}-${DATAKU.Education[i].Time.To}</div> <div class="desc">${DATAKU.Education[i].Description}<hr>Coursework: ${DATAKU.Education[i].Coursework} <br>Link:<a href="${DATAKU.Education[i].Link}">Here</a></div>`;
+                newDiv2.innerHTML = `<h3 class="degree">${DATAKU.Education[i]["Academic Degree"]}</h3><div class="education-body">${DATAKU.Education[i]["School"]}</div> <div class="time">${from.getFullYear()}-${to.getFullYear()}</div> <div class="desc">${DATAKU.Education[i].Description}<hr>Coursework: ${DATAKU.Education[i].Coursework} <br>Link:<a href="${DATAKU.Education[i].Link}">Here</a></div>`;
                 newDiv.append(newDiv2);
                 toAdd.appendChild(newDiv);
             }
