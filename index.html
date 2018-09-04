@@ -337,15 +337,15 @@
                     <div class="item col-12 col-md-4">
                         <div class="item-inner">
                             <div class="chart-easy-pie text-center">
-                                <div class="chart-theme-1 chart" data-percent="50">
-                                    <span>50</span>%
+                                <div class="chart-theme-1 chart" data-percent="75">
+                                    <span>75</span>%
                                 </div>
                             </div>
                             <h4 class="skill-name">Web Security</h4>
                             <div class="level">Intermediate, 1 year</div>
                             <div class="desc">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                                penatibus et magnis dis parturient
+                                Due to certain circumstances in a certain project knows how to make a hardened web server with ASP.NET MVC. OWASP and ISO 27001 are no joke
+                                for a learner.
                             </div>
                         </div>
                         <!--//item-inner-->
@@ -657,66 +657,67 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <form class="needs-validation" novalidate>
-                            <div class="">
-                                <div class="form-group">
-                                    <label for="exampleInputUsername">Name:</label>
-                                    <input type="text" class="form-control" id="" placeholder="Enter your full name" required>
-                                    <div class="valid-feedback">
-                                        Looking Good
+                        <fieldset disabled>
+                            <form action="" method="POST" class="needs-validation" disabled novalidate>
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="exampleInputUsername">Name:</label>
+                                        <input name="name" type="text" class="form-control" id="" placeholder="Enter your full name" required>
+                                        <div class="valid-feedback">
+                                            Looking Good
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please fill your name
+                                        </div>
                                     </div>
-                                    <div class="invalid-feedback">
-                                        Please fill your name
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail">Email:</label>
+                                        <input name="email" type="email" class="form-control" id="exampleInputEmail" placeholder="Enter your email" required>
+                                        <div class="valid-feedback">
+                                            Looking Good
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please fill your email
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail">Email:</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter your email" required>
-                                    <div class="valid-feedback">
-                                        Looking Good
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please fill your email
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="telephone">Mobile No:</label>
-                                    <input type="tel" class="form-control" id="telephone" placeholder="Enter your mobile number" required>
-                                    <div class="valid-feedback">
-                                        Looking Good
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please fill your mobile number
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="">
-                                <div class="form-group">
-                                    <label for="description">Message</label>
-                                    <textarea class="form-control" id="description" placeholder="Enter Your Message" required></textarea>
-                                    <div class="valid-feedback">
-                                        Looking Good
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please fill your message
+                                    <div class="form-group">
+                                        <label for="telephone">Mobile No:</label>
+                                        <input name="mobile" type="tel" class="form-control" id="telephone" placeholder="Enter your mobile number" required>
+                                        <div class="valid-feedback">
+                                            Looking Good
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please fill your mobile number
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="g-recaptcha" data-sitekey="6LftD2cUAAAAAMLgZfE9rVkOZvJsSeLhorLymt02"></div>
-                                <div>
-                                    <button type="submit" class="btn btn-default submit">
-                                        <i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message
-                                    </button>
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="description">Message</label>
+                                        <textarea name="message" class="form-control" id="description" placeholder="Enter Your Message" required></textarea>
+                                        <div class="valid-feedback">
+                                            Looking Good
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please fill your message
+                                        </div>
+                                    </div>
+                                    <div class="g-recaptcha" data-sitekey="6LftD2cUAAAAAMLgZfE9rVkOZvJsSeLhorLymt02"></div>
+                                    <div>
+                                        <button type="submit" class="btn btn-default submit">
+                                            <i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message
+                                        </button>
+                                    </div>
                                 </div>
-
-                            </div>
-                        </form>
+                            </form>
+                        </fieldset>
                     </div>
                     <div class="col-lg-6">
                         <div id="googleMap" style="width:100%;height:100%;"></div>
                     </div>
                 </div>
                 <!-- </div> -->
-                <!--//diaplog-->
+                <!--//dialog-->
             </div>
             <!--//intro-->
         </section>
@@ -761,7 +762,7 @@
                 var newDiv2 = document.createElement("div");
                 newDiv.className = "item col-12 col-md-4";
                 newDiv2.className = "item-inner";
-                newDiv2.innerHTML = `<h3 class="degree">${DATAKU.Education[i]["Academic Degree"]}</h3><div class="education-body">${DATAKU.Education[i]["School"]}</div> <div class="time">${from.getFullYear()}-${to.getFullYear()}</div> <div class="desc">${DATAKU.Education[i].Description}<hr>Coursework: ${DATAKU.Education[i].Coursework} <br>Link:<a href="${DATAKU.Education[i].Link}">Here</a></div>`;
+                newDiv2.innerHTML = `<h3 class="degree">${DATAKU.Education[i]["Academic Degree"]}</h3><div class="education-body">${DATAKU.Education[i]["School"]}</div> <div class="time">${from.getFullYear()}-${to.getFullYear()}</div> <div class="desc">${DATAKU.Education[i].Description}<hr>Coursework: ${DATAKU.Education[i].Coursework} <br>${DATAKU.Education[i]["Link Name"]}:<a href="${DATAKU.Education[i].Link}"> Here</a></div>`;
                 newDiv.append(newDiv2);
                 toAdd.appendChild(newDiv);
             }
