@@ -759,15 +759,17 @@
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     <script>
         // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDBYHdXl4YZ2IEWMKvahoMtCtWsMV2ClbM",
-            authDomain: "simplyeazygithubio.firebaseapp.com",
-            databaseURL: "https://simplyeazygithubio.firebaseio.com",
-            projectId: "simplyeazygithubio",
-            storageBucket: "simplyeazygithubio.appspot.com",
-            messagingSenderId: "167142916055"
-        };
-        firebase.initializeApp(config);
+        var firebaseConfig = {
+    apiKey: "AIzaSyDd5FwxH0-nWRUeY4E2psdZ0wV3NU--0S8",
+    authDomain: "simplyeazygithubio.firebaseapp.com",
+    databaseURL: "https://simplyeazygithubio.firebaseio.com",
+    projectId: "simplyeazygithubio",
+    storageBucket: "simplyeazygithubio.appspot.com",
+    messagingSenderId: "167142916055",
+    appId: "1:167142916055:web:1eb43cf7a863b378"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
         var database = firebase.database();
         var DATAKU;
         database.ref('/').once('value', function (snapshot) {
